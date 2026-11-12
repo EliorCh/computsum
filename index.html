@@ -1,4 +1,4 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><!-- mta-theme --><link rel="stylesheet" href="../main/site-theme.css"><script src="../main/site-theme.js" data-course="comp" data-fam="rail" data-footer="main .col" data-hero="#home .mta-old-hero"></script><!-- /mta-theme -->
+<!doctype html><html lang="he" dir="rtl"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><!-- mta-theme --><link rel="stylesheet" href="../main/site-theme.css"><script src="../main/site-theme.js" data-course="comp" data-fam="rail" data-footer="body" data-hero="#home .mta-old-hero"></script><!-- /mta-theme -->
 </head><body>
 <title>חישוביות — סיכום</title>
 <script data-goatcounter="https://eliorch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -7180,6 +7180,9 @@ write X`]
     function load(i) { $("#tm-src").value = T.PRESETS[i][2]; $("#tm-in").value = T.PRESETS[i][1]; reset(); }
     sel.addEventListener("change", () => load(+sel.value));
     $("#tm-reset").addEventListener("click", reset);
+    /* editing the machine or the input restarts it, so the run always uses what is written */
+    let editT = null;
+    ["#tm-src", "#tm-in"].forEach(s => $(s).addEventListener("input", () => { clearTimeout(editT); editT = setTimeout(reset, 300); }));
     $("#tm-step").addEventListener("click", one);
     $("#tm-auto").addEventListener("click", () => { if (timer) { stopAuto(); return; } if (!c) reset(); timer = setInterval(one, 180); $("#tm-auto").textContent = "עצירה"; });
     $("#tm-run").addEventListener("click", () => { stopAuto(); reset(); if (!c) return; let n = 0; while (!c.halted && !c.stuck && n < 20000) { T.step(m, c); n++; } draw(); if (!c.halted && !c.stuck) { $("#tm-msg").classList.add("err"); setOut($("#tm-msg"), "לא עצרה אחרי 20000 צעדים. כנראה ⊥ על הקלט הזה."); } });
