@@ -5,36 +5,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
-/* Layout: right-side chapter rail (RTL) + one reading column; each chapter is a hash-routed view. */
 :root{
-  --bg:#F3F5F9; --paper:#FFFFFF; --fg:#18202E; --muted:#5A6475; --line:#D9DEE8;
-  --accent:#2448B8; --accent-soft:#E4EAFB; --nil:#B4541A;
-  --theory:#2E5AAC; --theory-bg:#EEF3FC;
-  --formula:#6A3FB0; --formula-bg:#F3EEFB;
-  --example:#1F7A4D; --example-bg:#EAF6EF;
-  --warn:#A15C07; --warn-bg:#FDF3E3;
-  --ex:#0E6F7A; --ex-bg:#E6F4F5;
-  --sum:#3B4658; --sum-bg:#EEF0F4;
-  --code-bg:#F7F8FB; --kw:#2448B8; --op:#8A2F9E; --cst:#B4541A; --cmt:#7A8496;
-  --f-display:"Frank Ruhl Libre","David Libre",Georgia,serif;
-  --f-body:"Assistant","Segoe UI",Arial,sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
-  --rail:270px;
+  /* palette shared with the other summary sites (algosum / statsum / mlsum / comsum) */
+  --bg:#fbf9f3; --paper:#fffefa; --fg:#1c1917; --ink-soft:#44403c; --muted:#78716c; --line:#e7e5e0; --rule-soft:#f1efe9;
+  --accent:#4f46e5; --accent-soft:#eef2ff; --indigo-9:#312e81; --nil:#b45309;
+  --theory:#1d4ed8; --theory-bg:#eff6ff; --theory-edge:#bfdbfe;
+  --formula:#b45309; --formula-bg:#fef9e7; --formula-edge:#fcd34d;
+  --example:#047857; --example-bg:#ecfdf5; --example-edge:#a7f3d0;
+  --warn:#be123c; --warn-bg:#fff1f2; --warn-edge:#fecdd3;
+  --ex:#6d28d9; --ex-bg:#f5f3ff; --ex-edge:#ddd6fe;
+  --sum:#334155; --sum-bg:#f1f5f9; --sum-edge:#cbd5e1;
+  --code-bg:#f5f5f4; --pre-bg:#0f172a; --pre-bg-2:#1e293b; --pre-ink:#e2e8f0;
+  --kw:#93c5fd; --op:#f0abfc; --cst:#fcd34d; --cmt:#94a3b8;
+  --shadow-sm:0 1px 2px rgba(28,25,23,.04),0 1px 3px rgba(28,25,23,.06);
+  --shadow:0 4px 12px rgba(28,25,23,.05),0 1px 3px rgba(28,25,23,.04);
+  --f-display:"Frank Ruhl Libre",Georgia,serif;
+  --f-body:"Assistant",-apple-system,sans-serif;
+  --f-mono:"JetBrains Mono","Courier New",monospace;
+  --rail:320px;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#10141C; --paper:#171C27; --fg:#E3E8F1; --muted:#9AA4B6; --line:#2B3343;
-  --accent:#8FA9F5; --accent-soft:#1F2A47; --nil:#F0A06A;
-  --theory:#8FB1F0; --theory-bg:#18233A; --formula:#C3A6F2; --formula-bg:#231C36;
-  --example:#7FD3A4; --example-bg:#15291F; --warn:#F2BE6B; --warn-bg:#2C2112;
-  --ex:#79CFD8; --ex-bg:#122A2D; --sum:#C2CAD8; --sum-bg:#1D2230;
-  --code-bg:#121722; --kw:#8FA9F5; --op:#D59BE6; --cst:#F0A06A; --cmt:#7F8AA0; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#10141C; --paper:#171C27; --fg:#E3E8F1; --muted:#9AA4B6; --line:#2B3343;
-  --accent:#8FA9F5; --accent-soft:#1F2A47; --nil:#F0A06A;
-  --theory:#8FB1F0; --theory-bg:#18233A; --formula:#C3A6F2; --formula-bg:#231C36;
-  --example:#7FD3A4; --example-bg:#15291F; --warn:#F2BE6B; --warn-bg:#2C2112;
-  --ex:#79CFD8; --ex-bg:#122A2D; --sum:#C2CAD8; --sum-bg:#1D2230;
-  --code-bg:#121722; --kw:#8FA9F5; --op:#D59BE6; --cst:#F0A06A; --cmt:#7F8AA0; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.7;margin:0}
 .wrap{display:flex;gap:0;min-height:100vh}
@@ -165,6 +154,94 @@ mark.new{background:var(--example-bg);color:var(--fg);outline:1.5px solid var(--
   .f{font-size:13.5px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ===== shared summary-site language (matches algosum / statsum / mlsum / comsum) ===== */
+body{line-height:1.75;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(circle at 20% 0%,rgba(99,102,241,.035),transparent 40%),radial-gradient(circle at 80% 100%,rgba(245,158,11,.035),transparent 40%);background-attachment:fixed}
+.wrap{max-width:1480px;margin-inline:auto}
+.rail{background:linear-gradient(180deg,#1e1b4b 0%,#312e81 100%);color:#e0e7ff;border:0;border-inline-end:1px solid rgba(255,255,255,.06);padding:32px 24px}
+.rail::-webkit-scrollbar{width:6px}.rail::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:3px}
+.rail .brand{font-family:var(--f-display);font-size:24px;font-weight:700;color:#fff;letter-spacing:-.01em;line-height:1.2}
+.rail .brand:hover{color:#fbbf24}
+.rail .brand small{color:#c7d2fe;font-family:var(--f-body);font-size:13px;font-weight:500;margin-top:6px;letter-spacing:0}
+.rail .brand-meta{font-size:11px;color:#a5b4fc;text-transform:uppercase;letter-spacing:.1em;margin:14px 0 0;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.rail nav{margin-top:6px;gap:2px}
+.rail .nav-label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#818cf8;font-weight:700;margin:22px 0 8px;padding-inline-start:8px}
+.rail a.ch{align-items:center;padding:8px 12px;border-radius:8px;color:#c7d2fe;font-size:14.5px;font-weight:500;transition:all .15s ease}
+.rail a.ch:hover{background:rgba(255,255,255,.06);color:#fff}
+.rail a.ch .n{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;background:rgba(255,255,255,.08);border-radius:6px;font-size:11px;font-weight:700;color:#c7d2fe}
+.rail a.ch.active{background:rgba(255,255,255,.1);color:#fff;box-shadow:inset 3px 0 0 #fbbf24}
+.rail a.ch.active .n{background:#fbbf24;color:#1e1b4b}
+.rail .secs{padding-inline-start:44px;margin-block:4px 10px}
+.rail .secs a{color:#a5b4fc;font-size:13.5px}
+.rail .secs a:hover,.rail .secs a.on{color:#fff;background:rgba(255,255,255,.08)}
+.rail .tools{border-top:1px solid rgba(255,255,255,.08);margin-top:24px;padding-top:16px}
+.rail .tools button{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#e0e7ff}
+.rail .tools button:hover{background:rgba(255,255,255,.14);color:#fff;border-color:#fbbf24}
+main{padding-block:56px 120px;padding-inline:max(24px,env(safe-area-inset-left,0px)) max(24px,env(safe-area-inset-right,0px))}
+.col{max-width:900px;margin-inline:64px auto}
+.eyebrow{display:inline-block;font-family:var(--f-body);font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.15em;background:var(--accent-soft);padding:6px 12px;border-radius:99px;margin-bottom:16px}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(34px,4.4vw,48px);line-height:1.15;letter-spacing:-.02em;margin:0 0 14px;color:var(--fg)}
+.hook{font-size:19px;color:var(--ink-soft);line-height:1.6;margin-bottom:40px}
+h2{font-size:32px;letter-spacing:-.015em;margin:56px 0 20px;position:relative;padding-inline-start:20px}
+h2::before{content:"";position:absolute;inset-inline-start:0;top:12px;bottom:12px;width:4px;background:var(--accent);border-radius:2px}
+h3{font-size:22px;margin:32px 0 12px;letter-spacing:-.005em}
+main p,main li{color:var(--ink-soft)} main p strong,main li strong{color:var(--fg)}
+code{background:#f5f5f4;border-color:#e7e5e4;color:#be185d;border-radius:5px;padding:1px 6px}
+.f{background:var(--formula-bg);border:1px solid var(--formula-edge);border-radius:10px;color:#78350f;padding:10px 16px}
+.f .s{color:var(--formula)}
+pre{background:var(--pre-bg);border:1px solid var(--pre-bg-2);color:var(--pre-ink);border-radius:12px;padding:16px 20px;line-height:1.7;box-shadow:var(--shadow)}
+pre .lbl{color:#94a3b8}
+.box{border-radius:14px;margin:24px 0;box-shadow:var(--shadow-sm);border:1px solid var(--line);background:var(--paper)}
+.box>.box-h{padding:12px 18px;gap:10px;font-size:15px;border-bottom:1px solid var(--line)}
+.box>.box-h .tag{border:0;color:#fff;font-family:var(--f-body);font-size:12px;font-weight:700;letter-spacing:.02em;padding:3px 10px;border-radius:8px;background:currentColor}
+.box>.box-h .tag{background:var(--hc);color:#fff}
+.box>.box-body{padding:16px 22px 14px}
+.box.theory{border-color:var(--theory-edge);--hc:var(--theory)} .box.theory>.box-h{background:var(--theory-bg);color:var(--theory)}
+.box.formula{border-color:var(--formula-edge);background:var(--formula-bg);--hc:var(--formula)} .box.formula>.box-h{background:transparent;color:var(--formula);border-bottom-color:rgba(180,83,9,.18)}
+.box.example{border-color:var(--example-edge);--hc:var(--example)} .box.example>.box-h{background:var(--example-bg);color:var(--example)}
+.box.warn{border-color:var(--warn-edge);--hc:var(--warn)} .box.warn>.box-h{background:var(--warn-bg);color:var(--warn)}
+.box.exercise{border-color:var(--ex-edge);--hc:var(--ex)} .box.exercise>.box-h{background:var(--ex-bg);color:var(--ex)}
+.box.summary{border-color:var(--sum-edge);--hc:var(--sum)} .box.summary>.box-h{background:var(--sum-bg);color:var(--sum)}
+.keypoint{background:linear-gradient(270deg,var(--formula-bg) 0%,transparent 100%);border:0;border-inline-start:3px solid var(--formula);border-radius:8px;padding:14px 18px;font-weight:500;color:var(--ink-soft)}
+.keypoint::before{content:"💡 ";font-size:18px}
+details.sol{border:1px solid var(--ex-edge);border-radius:10px;padding:0;background:#fff;overflow:hidden;margin:12px 0}
+details.sol>summary{list-style:none;background:var(--ex-bg);color:var(--ex);padding:11px 14px;font-size:14px;text-align:center;transition:background .15s ease}
+details.sol>summary::-webkit-details-marker{display:none}
+details.sol>summary::before{content:"▼ ";font-size:10px}
+details.sol[open]>summary::before{content:"▲ "}
+details.sol>summary:hover{background:#ede9fe}
+details.sol[open]>summary{margin:0;border-bottom:1px solid var(--example-edge)}
+details.sol>:not(summary){margin-inline:20px}
+details.sol[open]{background:var(--example-bg)}
+details.sol[open]>:last-child{margin-bottom:16px}
+details.sol[open]>summary+*{margin-top:14px}
+table{background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--shadow-sm);font-size:15px}
+th,td{border:0;border-bottom:1px solid var(--rule-soft);border-inline-start:1px solid var(--rule-soft);padding:10px 14px}
+th{background:var(--sum-bg);color:var(--sum)}
+tr:last-child td{border-bottom:0}
+figure{border-radius:12px;box-shadow:var(--shadow-sm);padding:18px}
+figcaption{font-style:italic}
+.card{background:var(--paper);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow-sm);transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card .n{display:inline-block;width:fit-content;font-family:var(--f-body);font-weight:700;font-size:11.5px;letter-spacing:.08em;color:var(--accent);background:var(--accent-soft);padding:2px 10px;border-radius:99px}
+.card b{font-weight:700;margin-top:4px}
+.widget{border:1px solid var(--accent);border-radius:14px;padding:18px;box-shadow:var(--shadow-sm)}
+.widget h4{color:var(--accent)}
+button.primary{background:var(--accent);border-color:var(--accent)}
+textarea,input[type=text],select{background:#fff}
+.out{background:#f5f5f4;border:1px solid var(--line)}
+.stat{background:var(--accent-soft)}
+.pager a{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 16px;box-shadow:var(--shadow-sm)}
+.pager a:hover{border-color:var(--accent)}
+@media (max-width:1100px){.col{margin-inline:auto}}
+@media (max-width:900px){
+  .rail{transform:translateX(100%);padding:calc(28px + env(safe-area-inset-top,0px)) 20px 24px}
+  .menu-btn{background:#312e81;color:#fff;border-color:#312e81}
+  main{padding-top:calc(72px + env(safe-area-inset-top,0px))}
+  .chapter{scroll-margin-top:calc(72px + env(safe-area-inset-top,0px))}
+  h1{font-size:34px} h2{font-size:26px}
+}
 #nilv{position:fixed;inset:0;z-index:100;background:#000;cursor:pointer;overflow:hidden}
 #nilv canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 #nilv .nil-exit{position:absolute;inset-inline:0;margin-inline:auto;width:fit-content;max-width:calc(100% - 32px);background:rgba(0,0,0,.85);border:1px solid #1f6f35;border-radius:8px;padding:6px 14px;bottom:calc(18px + env(safe-area-inset-bottom,0px));text-align:center;color:#7CFF9B;font:600 15px var(--f-mono);opacity:0;transition:opacity .6s;text-shadow:0 0 6px #0f0}
@@ -199,11 +276,12 @@ table.ref svg{display:inline-block;vertical-align:middle;max-width:none}
 <button id="nil-btn" class="nil-float" type="button" title="לא ללחוץ">אל תלחצו</button>
 <div class="wrap" dir="rtl" lang="he">
 <aside class="rail" aria-label="ניווט">
-  <a class="brand" href="#home">חישוביות<small>סיכום הקורס המלא · MTA</small></a>
+  <a class="brand" href="#home">חישוביות<small>פרופ׳ עופר אריאלי</small></a>
+  <div class="brand-meta">MTA · סמסטר א׳ 2026</div>
   <nav id="rail-nav"></nav>
   <div class="tools">
     <button id="open-all" type="button">פתח/סגור פתרונות</button>
-    <button id="theme-btn" type="button">ערכת צבע</button>
+    
   </div>
 </aside>
 <main><div class="col">
@@ -6386,12 +6464,14 @@ if T then {
   /* ------------------------------- router ------------------------------- */
   const chapters = [...document.querySelectorAll("section.chapter")];
   const nav = $("#rail-nav");
+  const GROUPS = { ch1: "חלק א׳ · שפות ותכנות", chComp: "חלק ב׳ · חשיבות והכרעה", hw1: "מטלות" };
   function buildNav(active) {
     nav.innerHTML = "";
     chapters.forEach((c, i) => {
       const a = document.createElement("a");
       a.className = "ch" + (c === active ? " active" : "");
       a.href = "#" + c.id;
+      if (GROUPS[c.id]) { const g = document.createElement("div"); g.className = "nav-label"; g.textContent = GROUPS[c.id]; nav.appendChild(g); }
       a.innerHTML = '<span class="n">' + (i === 0 ? "·" : c.id === "hw1" ? "✎" : i) + "</span><span>" + esc(c.dataset.title) + "</span>";
       nav.appendChild(a);
       if (c === active) {
@@ -6436,13 +6516,6 @@ if T then {
   }
   window.addEventListener("scroll", spy, { passive: true });
   $("#menu-btn").addEventListener("click", () => $(".rail").classList.toggle("open"));
-  $("#theme-btn").addEventListener("click", () => {
-    const r = document.documentElement;
-    const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-    r.dataset.theme = dark ? "light" : "dark";
-    try { localStorage.setItem("comp-theme", r.dataset.theme); } catch (e) { }
-  });
-  try { const t = localStorage.getItem("comp-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) { }
   $("#open-all").addEventListener("click", () => {
     const ds = current.querySelectorAll("details.sol");
     const anyClosed = [...ds].some(d => !d.open);
