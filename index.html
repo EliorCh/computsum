@@ -312,6 +312,17 @@ table.ref svg{display:inline-block;vertical-align:middle;max-width:none}
   <a class="card" href="#hw1sol"><span class="n">מטלה 1</span><b>מדריך פתרון מלא</b><span>לכל שאלה: הרעיון, שאלה דומה עם פתרון, ומהלך הפתרון המלא של השאלה מהמטלה.</span></a>
 </div>
 
+<div class="box summary"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">מבנה הקורס</span></div><div class="box-body">
+<p>הקורס בנוי כמו פירמידה, בשלושה חלקים לא שווים באורכם:</p>
+<div class="tbl"><table>
+<tr><th>חלק</th><th>בערך</th><th>מה בונים</th><th>פרקים באתר</th></tr>
+<tr><td class="c">1</td><td>6 שבועות</td><td>מודל חישובי שמבוסס על שפות תכנות: עצים, <bdi dir="ltr">WHILE</bdi>, מטה-תכנות, השוואת שפות, קומפילציה</td><td>1–7</td></tr>
+<tr><td class="c">2</td><td>5–6 שבועות</td><td>תורת החישוביות עצמה: מה אפשר ומה אי אפשר לחשב</td><td>8–10</td></tr>
+<tr><td class="c">3</td><td>2–3 שבועות</td><td>מכונות טיורינג, כהכנה לקורס סיבוכיות</td><td>11–12</td></tr>
+</table></div>
+<p>במסלול הזה המודל מבוסס על שפות תכנות, כמו בספר של אמיר בן-עמרם (בעברית), שהוא תקציר של הספר של <bdi dir="ltr">Neil Jones</bdi>. בקבוצות אחרות של הקורס המודל קצת שונה, אבל התוצאות העיקריות זהות, ושאלות המבחן מנוסחות בגרסה לכל קבוצה. מכאן ההמלצה מההרצאה: לא לעבור בין קבוצות באמצע הסמסטר.</p>
+</div></div>
+
 <h2 id="home-exams">מבחני עבר: איפה כל שאלה</h2>
 <p>השאלות ממבחני העבר של הקורס משולבות בסוף הפרק שמלמד את החומר שלהן, תחת הכותרת "מבחני עבר", עם רמז ופתרון לכל אחת. שאלות על חומר שירד מהקורס לא נכללו.</p>
 <div class="tbl"><table>
@@ -399,6 +410,17 @@ table.ref svg{display:inline-block;vertical-align:middle;max-width:none}
 <li><strong><bdi dir="ltr">Alan Turing</bdi>:</strong> מכונת חישוב מופשטת, מכונת טיורינג.</li>
 </ul>
 <div class="keypoint">המפתיע: שלושת המודלים התבררו כשקולים. מכאן התזה של צ'רץ'–טיורינג: המודלים האלה תופסים את מושג האלגוריתם כולו, ולכן הוכחה שאין תוכנית במודל היא הוכחה שאין אלגוריתם בכלל. בקורס משתמשים במודל מודרני יותר: שפות תכנות פשוטות.</div>
+
+<div class="box theory"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">למה בכלל יש בעיות שאין להן פתרון?</span></div><div class="box-body">
+<p>הטיעון מהשיעור הראשון לא מראה בעיה מסוימת שאין לה פתרון. הוא רק מראה שחייבת להיות כזו, בספירה: יש יותר בעיות מאשר תוכניות.</p>
+<div class="tbl"><table>
+<tr><th>קבוצה</th><th>למה היא בגודל הזה</th><th>עוצמה</th></tr>
+<tr><td><strong>הבעיות</strong>: כבר רק פונקציות מהטבעיים ל-<span class="ltr nw">{0,1}</span></td><td>כל פונקציה כזו היא סדרה אינסופית של אפסים ואחדות, כמו פיתוח בינארי של מספר ממשי</td><td>עוצמת הרצף, <span class="ltr nw">ℵ</span> (כמו הממשיים)</td></tr>
+<tr><td><strong>הפתרונות</strong>: התוכניות</td><td>כל תוכנית היא מחרוזת סופית מעל א"ב סופי, ואפשר למנות אותן: קודם כל התוכניות באורך 1, אחר כך באורך 2, וכן הלאה</td><td>בת-מנייה, <span class="ltr nw">ℵ₀</span> (כמו הטבעיים)</td></tr>
+</table></div>
+<p>כל תוכנית דטרמיניסטית מחשבת פונקציה אחת בלבד, ולכן פותרת לכל היותר בעיה אחת. מכיוון ש-<span class="ltr nw">ℵ₀ &lt; ℵ</span>, אין מספיק תוכניות לכל הבעיות. כלומר יש בעיות (ולמעשה רוב הבעיות) שאין להן פתרון אלגוריתמי.</p>
+<p>הטיעון לא תלוי בכוח המחשב: לא משנה כמה זיכרון או מעבד יהיו, מספר התוכניות האפשריות נשאר בן-מנייה. לכן צריך מודל חישובי פורמלי. תשובה חיובית ("יש פתרון") מראים פשוט בכתיבת תוכנית, אבל תשובה שלילית ("אין פתרון") אפשר רק להוכיח, ולשם כך צריך הגדרה מדויקת של "תוכנית".</p>
+</div></div>
 
 <h2 id="ch1-sem">"מה" לעומת "איך": הסמנטיקה של תוכנית</h2>
 <p>זו האבחנה המרכזית של הקורס. <strong>מה</strong> התוכנית עושה דורש לדעת רק את הקלט והפלט. <strong>איך</strong> זה ממומש דורש לקרוא את הקוד. מבחינת "מה", תוכנית היא המרה של קלט לפלט, כלומר פונקציה מתמטית.</p>
@@ -518,6 +540,24 @@ table.ref svg{display:inline-block;vertical-align:middle;max-width:none}
 </svg>
 <figcaption>הנקודות הכתומות הן אטומי <bdi dir="ltr">nil</bdi>; הנקודות הכחולות הן צמתי זיווג (<bdi dir="ltr">h . t</bdi>), עם <bdi dir="ltr">h</bdi> משמאל ו-<bdi dir="ltr">t</bdi> מימין.</figcaption>
 </figure>
+
+<div class="box example"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">בונים את <bdi dir="ltr">D</bdi> שלב אחר שלב</span></div><div class="box-body">
+<p>ההגדרה האינדוקטיבית נותנת דרך לייצר את כל העצים: בכל שלב מזווגים כל שני עצים שכבר יש (גם עץ עם עצמו, ובשני הסדרים), ושומרים רק את מה שחדש.</p>
+<div class="tbl"><table>
+<tr><th>שלב</th><th>מה כבר יש</th><th>עצים חדשים</th></tr>
+<tr><td class="c">0</td><td>כלום</td><td class="mono">nil</td></tr>
+<tr><td class="c">1</td><td class="mono">nil</td><td class="mono">(nil.nil)</td></tr>
+<tr><td class="c">2</td><td class="mono">nil , (nil.nil)</td><td class="mono">(nil.(nil.nil))
+((nil.nil).nil)
+((nil.nil).(nil.nil))</td></tr>
+</table></div>
+<p>בשלב 2 יש שלושה עצים חדשים: <span class="ltr nw">(nil.nil)</span> עם <bdi dir="ltr">nil</bdi> בשני הסדרים (שני עצים שונים, כי הסדר בזוג חשוב), ו-<span class="ltr nw">(nil.nil)</span> עם עצמו. הזיווג <span class="ltr nw">(nil.nil)</span> כבר קיים, ולכן לא נספר שוב.</p>
+<p><strong>שתי הערות מהשיעור:</strong></p>
+<ul>
+<li><strong>אין עץ ריק.</strong> לכל עץ יש לפחות צומת אחד. העץ הקטן ביותר הוא <bdi dir="ltr">nil</bdi>, בגודל 1.</li>
+<li><strong>עץ בינארי מלא</strong> = לכל צומת יש בדיוק שני ילדים או אפס. העץ לא חייב להיות מאוזן. בקורס, "עץ" תמיד אומר עץ בינארי מלא.</li>
+</ul>
+</div></div>
 
 <h3>גודל של עץ</h3>
 <div class="box formula"><div class="box-h"><span class="tag">הגדרה</span> <span class="ht">|d|</span></div><div class="box-body">
@@ -751,11 +791,56 @@ table.ref svg{display:inline-block;vertical-align:middle;max-width:none}
 <p style="font-size:14px;color:var(--muted);margin:8px 0 0">העצים נוצרים באקראי, כך שאפשר להתאמן כמה שרוצים. ספירה של תשובות נכונות: <b id="dr-score">0</b></p>
 </div>
 
+<div class="box formula"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">הגודל של רשימה, וראש וזנב</span></div><div class="box-body">
+<p>רשימה היא עץ, ולכן יש לה גודל. בציור רואים מאיפה באים הצמתים: כל האיברים, ועוד <bdi dir="ltr">n</bdi> צמתי זיווג על השדרה, ועוד ה-<bdi dir="ltr">nil</bdi> שבסוף:</p>
+<div class="f ltr">|(d1 d2 … dn)|  =  |d1| + |d2| + … + |dn|  +  n  +  1</div>
+<p>דוגמה:</p>
+<div class="f ltr">|((nil) (nil nil) nil)|  =  (3 + 5 + 1) + 3 + 1  =  13</div>
+<div class="tbl"><table>
+<tr><th>מונח</th><th>ברשימה <span class="ltr nw">(d1 d2 … dn)</span></th></tr>
+<tr><td>ראש הרשימה (<bdi dir="ltr">head</bdi>)</td><td>האיבר הראשון, <bdi dir="ltr">d1</bdi></td></tr>
+<tr><td>זנב הרשימה (<bdi dir="ltr">tail</bdi>)</td><td>הרשימה <span class="ltr nw">(d2 … dn)</span>, לא האיבר האחרון</td></tr>
+<tr><td>האורך <span class="ltr nw">#d</span></td><td><bdi dir="ltr">n</bdi>, מספר העצים שתלויים ברמה החיצונית</td></tr>
+</table></div>
+<p><strong>לא להתבלבל:</strong> הרשימה הריקה <span class="ltr nw">()</span> היא העץ <bdi dir="ltr">nil</bdi>. האורך שלה 0, אבל הגודל שלה 1.</p>
+</div></div>
+
 <h2 id="ch1-rep">שימושים: ייצוג מחרוזות ומספרים</h2>
 <ul>
 <li><strong>מחרוזות:</strong> בוחרים עץ קבוע לכל אות, ו-<code>"abc"</code> מיוצגת כרשימה <code>(a b c)</code>.</li>
 <li><strong>מספרים, השיטה האונרית:</strong> המספר <bdi dir="ltr">n</bdi> מיוצג כרשימה של <bdi dir="ltr">n</bdi> פעמים <bdi dir="ltr">nil</bdi>, ומסמנים <span class="ltr nw">nil<sup>n</sup></span>.</li>
 </ul>
+<div class="box theory"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">מה צריך מקידוד</span></div><div class="box-body">
+<p>כדי לעבוד רק עם עצים, מקודדים כל טיפוס נתונים אחר בעצים. קידוד טוב צריך שתי תכונות:</p>
+<ul>
+<li><strong>חד-חד-ערכי:</strong> שני ערכים שונים מקודדים לשני עצים שונים.</li>
+<li><strong>הפיך:</strong> מהעץ אפשר לשחזר בקלות מה הוא מקודד.</li>
+</ul>
+<p><strong>מחרוזות:</strong> קובעים "מקרא", עץ שונה לכל אות ב-<bdi dir="ltr">Σ</bdi>, והמחרוזת היא הרשימה של העצים של האותיות שלה. למשל <span class="ltr nw">"ABBC"</span> היא רשימה של ארבעה איברים: העץ של <bdi dir="ltr">A</bdi>, פעמיים העץ של <bdi dir="ltr">B</bdi>, והעץ של <bdi dir="ltr">C</bdi>. שתי מחרוזות שונות נבדלות לפחות בתו אחד, ולכן הרשימות שלהן נבדלות לפחות באיבר אחד. כדי לפענח, עוברים על השדרה ומחפשים כל איבר במקרא. זו דוגמה למקום שבו נוח לחשוב על עצים כרשימות.</p>
+</div></div>
+<div class="box example"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">שתי דרכים לקודד מספרים</span></div><div class="box-body">
+<div class="tbl"><table>
+<tr><th>דרך</th><th>איך</th><th>יתרון</th><th>חיסרון</th></tr>
+<tr><td>א: לפי ספרות</td><td>מקרא לעשר הספרות, והמספר הוא רשימת הספרות שלו (למשל 3742 היא רשימה של ארבעה עצים)</td><td>חסכוני במקום</td><td>תלוי במקרא. גם פעולה פשוטה כמו עוקב מסובכת: 3742 הופך ל-3743, אבל 3799 הופך ל-3800</td></tr>
+<tr><td>ב: אונרית</td><td><bdi dir="ltr">n</bdi> מיוצג כ-<span class="ltr nw">nil<sup>n</sup></span>, רשימה של <bdi dir="ltr">n</bdi> פעמים <bdi dir="ltr">nil</bdi></td><td>לא תלוי בשום מקרא, והתוכניות פשוטות: עוקב הוא <code>cons nil X</code>, קודם הוא <code>tl X</code></td><td>בזבזני מאוד: הגודל <span class="ltr nw">2n+1</span></td></tr>
+</table></div>
+<p>בקורס משתמשים בדרך ב: לחישוביות חשוב שאפשר לקודד, לא כמה מקום זה תופס. ה-0 הוא <bdi dir="ltr">nil</bdi>, כלומר הרשימה הריקה.</p>
+</div></div>
+<div class="box theory"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">בכיוון ההפוך: עץ כמחרוזת בינארית</span></div><div class="box-body">
+<p>כדי להראות שכל הטיפוסים שקולים, צריך גם לקודד עצים במחרוזות. קידוד אפשרי מעל <span class="ltr nw">{0,1}</span>:</p>
+<div class="f ltr">C(nil)      = 0
+C((h . t))  = 1 · C(h) · C(t)        (· is concatenation)</div>
+<p>זה מעבר <bdi dir="ltr">preorder</bdi> על העץ: כותבים 1 לכל זוג ו-0 לכל <bdi dir="ltr">nil</bdi>, קודם השורש, אחר כך תת-העץ השמאלי, ואז הימני.</p>
+<div class="tbl"><table>
+<tr><th>עץ</th><th>הקידוד</th></tr>
+<tr><td class="mono">nil</td><td class="mono">0</td></tr>
+<tr><td class="mono">(nil.nil)</td><td class="mono">100</td></tr>
+<tr><td class="mono">((nil.nil).nil)</td><td class="mono">11000</td></tr>
+<tr><td class="mono">(nil.(nil.nil))</td><td class="mono">10100</td></tr>
+</table></div>
+<p>הפענוח הוא מעבר אחד על המחרוזת: 0 הוא <bdi dir="ltr">nil</bdi>, ו-1 אומר "מכאן מתחיל זוג: פענחו עץ שמאלי ואחריו עץ ימני". לכן הקידוד חד-חד-ערכי והפיך.</p>
+</div></div>
+
 <div class="box exercise"><div class="box-h"><span class="tag">✍ תרגיל</span> <span class="ht">מספרים אונריים</span></div><div class="box-body">
 <p>כתבו את <span class="ltr nw">nil<sup>0</sup></span>, <span class="ltr nw">nil<sup>1</sup></span>, <span class="ltr nw">nil<sup>2</sup></span>, וחשבו את <span class="ltr nw">|nil<sup>n</sup>|</span>.</p>
 <details class="sol"><summary>פתרון</summary>
@@ -975,6 +1060,28 @@ while X do X := tl X</pre>
 </details>
 </div></div>
 
+<div class="box example"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">איך בודקים שתוכנית חוקית: מלמעלה למטה</span></div><div class="box-body">
+<p>כמו שקומפיילר עושה: מתחילים מהמחלקה הכי גדולה (תוכנית), ובכל צעד בודקים איזו שורה של ה-<bdi dir="ltr">BNF</bdi> מתאימה, ויורדים לחלקים שלה. על התוכנית <bdi dir="ltr">reverse</bdi>:</p>
+<pre class="wh">read X;
+while X do { Y := cons (hd X) Y; X := tl X };
+write Y</pre>
+<div class="tbl"><table>
+<tr><th>צעד</th><th>החלק שבודקים</th><th>מה מוצאים</th></tr>
+<tr><td class="c">1</td><td>כל התוכנית</td><td><span class="ltr nw">read X ; C ; write Y</span>: משתנה אחרי <bdi dir="ltr">read</bdi>, משתנה אחרי <bdi dir="ltr">write</bdi>. נשאר לבדוק ש-<bdi dir="ltr">C</bdi> פקודה</td></tr>
+<tr><td class="c">2</td><td class="mono">while X do {…}</td><td>פקודת <bdi dir="ltr">while</bdi>: <bdi dir="ltr">X</bdi> ביטוי (משתנה), ואז צריך שהגוף יהיה פקודה</td></tr>
+<tr><td class="c">3</td><td>גוף הלולאה</td><td>הפקודה הראשית היא <strong>שרשור</strong> (;). בודקים כל צד בנפרד</td></tr>
+<tr><td class="c">4</td><td class="mono">Y := cons (hd X) Y</td><td>השמה: משתנה, ובימין ביטוי <bdi dir="ltr">cons</bdi> עם שני ביטויים: <code>hd X</code> ו-<bdi dir="ltr">Y</bdi></td></tr>
+<tr><td class="c">5</td><td class="mono">X := tl X</td><td>השמה: משתנה, ובימין <code>tl X</code>. הכל חוקי</td></tr>
+</table></div>
+<p><strong>איך מתגלה שגיאה:</strong> אם היה כתוב <code>X := tl X X</code>, הבדיקה הייתה מוצאת את <code>tl X</code> כביטוי שלם, ואז נתקעת על ה-<bdi dir="ltr">X</bdi> הנוסף: הוא לא מתאים לאף שורה שיכולה לבוא אחרי ביטוי. כך קומפיילר יודע להצביע בערך על מקום השגיאה.</p>
+<p><strong>עוד שלוש הערות מהשיעור:</strong></p>
+<ul>
+<li>שם משתנה יכול להיות כל רצף של אותיות, ספרות וסימנים, חוץ מהמילים השמורות (<bdi dir="ltr">hd</bdi>, <bdi dir="ltr">tl</bdi>, <bdi dir="ltr">cons</bdi>, <bdi dir="ltr">while</bdi>, <bdi dir="ltr">do</bdi>, <bdi dir="ltr">if</bdi>, <bdi dir="ltr">then</bdi>, <bdi dir="ltr">else</bdi>, <bdi dir="ltr">read</bdi>, <bdi dir="ltr">write</bdi>).</li>
+<li>יש בדיוק <bdi dir="ltr">read</bdi> אחד בהתחלה ו-<bdi dir="ltr">write</bdi> אחד בסוף. הם לא פקודות, ולא יכולים להופיע בגוף. זה מתאים לפונקציה עם קלט אחד ופלט אחד. כמה ערכים מכניסים כרשימה אחת, ומפרקים בפנים.</li>
+<li>אפשר לכפות לולאה אינסופית עם תנאי קבוע: <code>while (nil.nil) do C</code>. הקבוע אף פעם לא הופך ל-<bdi dir="ltr">nil</bdi>, כמו <code>while true</code>.</li>
+</ul>
+</div></div>
+
 <h3>מוסכמות של התחביר הטקסטואלי</h3>
 <ul>
 <li>סוגריים עגולים עוטפים תת-ביטויים: <code>cons (hd X) (tl X)</code>.</li>
@@ -1044,6 +1151,14 @@ write Y</pre>
 <tr><td><strong>succ</strong> (הוספת 1)</td><td class="mono">read X; X := cons nil X; write X</td><td class="mono"><span class="ltr nw">⟦succ⟧ nil^n = nil^(n+1)</span></td></tr>
 <tr><td><strong>pred</strong> (החסרת 1)</td><td class="mono">read X; X := tl X; write X</td><td class="mono"><span class="ltr">⟦pred⟧ nil^(n+1) = nil^n,  ⟦pred⟧ nil = nil</span></td></tr>
 </table></div>
+<div class="box warn"><div class="box-h"><span class="tag">מההרצאה</span> <span class="ht">מלכודת ב-<bdi dir="ltr">succ</bdi>: הסדר של <bdi dir="ltr">cons</bdi></span></div><div class="box-body">
+<p><code>cons nil X</code> מוסיף <bdi dir="ltr">nil</bdi> <strong>בתחילת</strong> הרשימה <bdi dir="ltr">X</bdi>, ולכן מגדיל את המספר ב-1. הכתיב ההפוך, <code>cons X nil</code>, עושה משהו אחר לגמרי: הוא עוטף את <bdi dir="ltr">X</bdi> ברשימה עם איבר אחד.</p>
+<div class="f ltr">X = nil²  = (nil nil)
+cons nil X  =  (nil nil nil)  =  nil³       correct
+cons X nil  =  ((nil nil))                 a list of length 1</div>
+<p>וגם ב-<bdi dir="ltr">pred</bdi> כדאי לבדוק את מקרה הקצה: <span class="ltr nw">tl nil = nil</span>, ולכן הקודם של 0 יוצא 0. בשיעור הודגש לבדוק תמיד מה התוכנית עושה על 0.</p>
+</div></div>
+
 <div class="box example"><div class="box-h"><span class="tag">דוגמה</span> <span class="ht"><bdi dir="ltr">add</bdi>: חיבור מספרים אונריים</span></div><div class="box-body">
 <p>הקלט הוא זוג <span class="ltr nw">(n . m)</span> של שני מספרים אונריים. האפיון:</p>
 <div class="f ltr">∀ n, m ∈ ℕ :   ⟦add⟧ (n . m) = n + m</div>
@@ -1987,6 +2102,8 @@ comp from S to T in M:   ⟦ ⟦comp⟧M p ⟧T  = ⟦p⟧S</div>
 </details>
 </div></div>
 
+<div class="keypoint"><strong>הטכניקה מההרצאה להוכחת "השפה החזקה חזקה ממש":</strong> מוצאים <strong>תכונה שמשותפת לכל התוכניות</strong> בשפה החלשה (כאן: כולן עוצרות תמיד), ואז מראים תוכנית אחת בשפה החזקה שאין לה את התכונה הזו (כאן: <code>read X; while X do X := X; write X</code>, שעוצרת רק על <bdi dir="ltr">nil</bdi>). הנימוק לעצירה ב-<bdi dir="ltr">NOLOOP</bdi>: מונה הפקודה רק עולה, ומספר הפקודות סופי, ולכן בסוף מגיעים לפקודה האחרונה.</div>
+
 <h2 id="ch4-comp">קומפילציה ויחסי כוחות</h2>
 <div class="box theory"><div class="box-h"><span class="tag">משפט</span> <span class="ht">קומפיילר מוכיח כוח</span></div><div class="box-body">
 <p>אם קיים קומפיילר מ-<bdi dir="ltr">S</bdi> ל-<bdi dir="ltr">T</bdi>, אז <span class="ltr">T <span class="ltr nw">⪰</span> S</span>.</p>
@@ -2432,7 +2549,9 @@ write Y</td></tr>
 <tr><td><strong>update</strong></td><td><span class="ltr"><span class="ltr">⟦update⟧ (nil^i d (x1 … xn))</span></span> מחזירה את הרשימה שבה <span class="ltr nw">x<sub>i</sub></span> הוחלף ב-<bdi dir="ltr">d</bdi>. אם <span class="ltr nw">i&gt;n</span>, מרפדים את הרשימה ב-<bdi dir="ltr">nil</bdi>-ים.</td></tr>
 <tr><td><strong>lookup</strong></td><td><span class="ltr"><span class="ltr nw">⟦lookup⟧ (nil^i (x1 … xn))</span></span> מחזירה את <span class="ltr nw">x<sub>i</sub></span>, או <bdi dir="ltr">nil</bdi> אם <span class="ltr nw">i&gt;n</span>.</td></tr>
 </table></div>
-<p>משתמשים בהן כמקרו, למשל <code>Res := lookup list I L</code>.</p>
+<p>משתמשים בהן כמקרו, למשל <code>Res := lookup list I L</code>. אלה בדיוק התוכניות <strong>lookup ו-update שכתבתם במטלה 1</strong> (שאלה 3), ולכן מותר להשתמש בהן כמקרו: הקוד שלהן כבר נכתב.</p>
+<p><strong>הנחה:</strong> מניחים שהקידוד של <bdi dir="ltr">p</bdi> ושל <bdi dir="ltr">d</bdi> חוקי, ולא כותבים בדיקות תקינות. המרצה: "אנחנו מוותרים על בדיקות תקינות כדי לחסוך קצת בקוד".</p>
+<p>בשקף ובהרצאה השמות קצת אחרים: <bdi dir="ltr">CS</bdi> לגוף התוכנית (כאן <bdi dir="ltr">InstLst</bdi>) ו-<bdi dir="ltr">C</bdi> להוראה הנוכחית (כאן <bdi dir="ltr">Inst</bdi>). המשמעות זהה.</p>
 <pre class="wh">read PD;
 P       := hd PD;                     // decompose input
 D       := tl PD;
@@ -2461,8 +2580,24 @@ write ???</pre>
 <p>אחרי הלולאה צריך לשלוף את ערכו של משתנה הפלט מתוך ה-<bdi dir="ltr">store</bdi> ולהחזיר אותו:</p>
 <pre class="wh">Res := lookup list Out S;
 write Res</pre>
+<p><strong>למה הלולאה עוצרת אם ורק אם התוכנית עוצרת</strong> (שאלה שהמרצה שאל בכיתה):</p>
+<ul>
+<li>אם <bdi dir="ltr">p</bdi> עוצרת, זה קורה כשמונה התוכנית מגיע ל-<span class="ltr nw">m+1</span>, אם בהתקדמות רגילה ואם בקפיצה. אז <bdi dir="ltr">lookup</bdi> מחזירה <bdi dir="ltr">nil</bdi>, ו-<span class="ltr nw">Inst = nil</span>.</li>
+<li>אם <bdi dir="ltr">p</bdi> לא עוצרת, המונה נשאר תמיד בטווח <span class="ltr nw">1…m</span>, ולכן <bdi dir="ltr">Inst</bdi> אף פעם לא <bdi dir="ltr">nil</bdi> (כל הוראה היא רשימה לא ריקה), והמפרש לא עוצר.</li>
+</ul>
 <p>הלולאה נגמרת בעצמה: כש-<span class="ltr nw">N = m+1</span>, <code>lookup</code> מחזירה <bdi dir="ltr">nil</bdi> (אין הוראה כזו), ו-<span class="ltr nw">Inst = nil</span>. שימו לב גם ש-<bdi dir="ltr">N := succ N</bdi> מתבצע לפני ה-<bdi dir="ltr">case</bdi>, כך שהוראת <bdi dir="ltr">if</bdi> דורסת אותו כשצריך.</p>
 </details>
+</div></div>
+<div class="box warn"><div class="box-h"><span class="tag">טעות נפוצה</span> <span class="ht"><bdi dir="ltr">N</bdi> מול <bdi dir="ltr">Inst</bdi>, ומצב התוכנית</span></div><div class="box-body">
+<ul>
+<li><strong>מצב התוכנית = תוכן המשתנים + מונה התוכנית.</strong> המרצה דרש את שני המרכיבים.</li>
+<li><bdi dir="ltr">N</bdi> הוא <strong>האינדקס</strong> של ההוראה שמתבצעת עכשיו, ו-<bdi dir="ltr">Inst</bdi> הוא <strong>התוכן</strong> שלה. באתחול <span class="ltr nw">N = 1</span>. בכיתה סטודנט חשב ש-<bdi dir="ltr">N</bdi> "מסתכל אחד קדימה". זה לא נכון בתחילת הסיבוב: <bdi dir="ltr">N := succ N</bdi> מתבצע רק בתוך הלולאה, לפני ה-<bdi dir="ltr">case</bdi>.</li>
+<li>בהוראת <bdi dir="ltr">if</bdi>, המפרש מבצע השמה ל-<bdi dir="ltr">N</bdi> של <strong>מספר</strong> השורה <bdi dir="ltr">L1</bdi> או <bdi dir="ltr">L2</bdi>, ודורס את ה-<bdi dir="ltr">succ N</bdi> שבוצע קודם. המרצה: "עושים לו השמה של המספר".</li>
+<li>בשקף של המפרש, בשורת ה-<bdi dir="ltr">if</bdi> צריך להופיע <bdi dir="ltr">XI</bdi> ולא <bdi dir="ltr">X</bdi>. המרצה אמר בכיתה "יש פה טעות". הקוד כאן נכון.</li>
+</ul>
+</div></div>
+<div class="box theory"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">המפרש מוכיח גם ש-<span class="ltr nw">WHILE ⪰ GOTO</span></span></div><div class="box-body">
+<p>המרצה (שיעור 9): המפרש הזה "מוכיח בעקיפין" ש-<bdi dir="ltr">WHILE</bdi> חזקה לפחות כמו <bdi dir="ltr">GOTO</bdi>, בלי קומפיילר. לפי <a href="#ch4-int">המשפט "מפרש ב-<bdi dir="ltr">WHILE</bdi> מוכיח כוח"</a> מפרק 4: יש מפרש ל-<bdi dir="ltr">GOTO</bdi> שכתוב ב-<bdi dir="ltr">WHILE</bdi>, ולכן לכל תוכנית <bdi dir="ltr">GOTO</bdi> <bdi dir="ltr">p</bdi>, התוכנית <span class="ltr nw">⟦spec⟧(int . p)</span> היא תוכנית <bdi dir="ltr">WHILE</bdi> ששקולה לה.</p>
 </div></div>
 <div class="box exercise"><div class="box-h"><span class="tag">✍ תרגיל</span> <span class="ht">יעילות המפרש</span></div><div class="box-body">
 <p>מה זמן הריצה של המפרש על קלט (<bdi dir="ltr">p . d</bdi>)?</p>
@@ -2542,8 +2677,14 @@ write A</td></tr>
 <p>ראינו ש-<bdi dir="ltr">WHILE</bdi> בלי לולאות (<bdi dir="ltr">NOLOOP</bdi>) חלשה ממש. מה קורה כשמרשים לולאה אחת?</p>
 <div class="box theory"><div class="box-h"><span class="tag">טענה</span> <span class="ht"><span class="ltr"><span class="ltr nw">WHILE<sup>1Loop</sup></span> ≡ WHILE</span></span></div><div class="box-body">
 <p><span class="ltr nw">WHILE<sup>1Loop</sup></span> היא <bdi dir="ltr">WHILE</bdi> שבה בכל תוכנית יש לכל היותר פקודת <bdi dir="ltr">while</bdi> אחת.</p>
+<p><strong>הכיוון הקל צריך להיכתב במפורש:</strong> המרצה ניסח אותו בשתי הווריאציות ("הכיוון ההפוך הוא טריוויאלי"): הגבלה של שפה לא מחזקת אותה, וכל תוכנית בשפה המוגבלת היא תוכנית בשפה המלאה.</p>
 <p><strong>כיוון קל:</strong> כל תוכנית <span class="ltr nw">WHILE<sup>1Loop</sup></span> היא תוכנית <bdi dir="ltr">WHILE</bdi>, ולכן <span class="ltr"><span class="ltr nw">WHILE ⪰ WHILE<sup>1Loop</sup></span></span>.</p>
 <p><strong>הכיוון השני:</strong> לוקחים תוכנית <bdi dir="ltr">WHILE</bdi>, מתרגמים אותה ל-<bdi dir="ltr">GOTO</bdi>, ומתרגמים את התוצאה בחזרה ל-<bdi dir="ltr">WHILE</bdi> לפי הטבלה מ"קומפילציה מ-<bdi dir="ltr">GOTO</bdi> ל-<bdi dir="ltr">WHILE</bdi>". התוכנית שיוצאת היא <strong>לולאה אחת</strong> <span class="ltr nw">while PC do case PC of …</span>, וה-<bdi dir="ltr">case</bdi> הוא רק שרשרת של <bdi dir="ltr">if</bdi>-ים. לכן כל תוכנית <bdi dir="ltr">WHILE</bdi> שקולה לתוכנית עם לולאה אחת.</p>
+</div></div>
+<div class="box warn"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">למה לא לתרגם ישירות, ולמה מותר לעבור דרך <bdi dir="ltr">GOTO</bdi></span></div><div class="box-body">
+<p><strong>הניסיון הישיר שעלה בכיתה:</strong> להשאיר לולאה חיצונית אחת, ולהחליף כל <bdi dir="ltr">while</bdi> פנימי ב-<bdi dir="ltr">if</bdi>. זה נכשל: אחרי <bdi dir="ltr">if</bdi> אין "חזרה לתנאי", ולכן ה-<bdi dir="ltr">if</bdi> מבצע את הגוף פעם אחת לכל היותר בכל סיבוב של הלולאה החיצונית, וצריך לזכור באיזה שלב של הלולאה הפנימית אנחנו. עם לולאות מקוננות זה דורש דגלים מסובכים. המרצה: "לא פשוט".</p>
+<p><strong>הפתרון:</strong> לעבור דרך <bdi dir="ltr">GOTO</bdi>. <bdi dir="ltr">GOTO</bdi> שוברת את המבנה לרשימה שטוחה של הוראות, ומשם התרגום חזרה ל-<bdi dir="ltr">WHILE</bdi> נותן לולאה אחת עם מונה תוכנית (<bdi dir="ltr">PC</bdi>). המונה הוא בדיוק ה"דגל" שחסר בניסיון הישיר.</p>
+<p><strong>מותר לעבור דרך שפה שלישית בהוכחת שקילות:</strong> "אין שום מניעה לעבור דרך שפה שלישית, זה בסדר גמור". הרכבה של קומפיילרים היא קומפיילר. לכן המרצה הציג את הווריאציות האלה רק אחרי <bdi dir="ltr">GOTO</bdi>: בעזרתה ההוכחה הרבה יותר קלה.</p>
 </div></div>
 <div class="box theory"><div class="box-h"><span class="tag">טענה</span> <span class="ht"><span class="ltr"><span class="ltr nw">WHILE<sup>stop</sup></span> ≡ WHILE</span></span></div><div class="box-body">
 <p><span class="ltr nw">WHILE<sup>stop</sup></span> היא <bdi dir="ltr">WHILE</bdi> עם פקודה נוספת, <code>stop</code>, שעוצרת את התוכנית מיד ומחזירה את הערך שבמשתנה הפלט.</p>
@@ -2621,6 +2762,15 @@ f(x) = (nil . nil)    if x = nil</div>
 <h2 id="chF-if">ביטוי מותנה</h2>
 <p>אין פקודות, ולכן מבנה התנאי הוא <strong>ביטוי</strong> מותנה:</p>
 <pre class="wh">if E then E1 else E2</pre>
+<div class="box warn"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">אותה מילה <bdi dir="ltr">if</bdi>, משמעות אחרת בכל שפה</span></div><div class="box-body">
+<div class="tbl"><table>
+<tr><th>שפה</th><th>הצורה</th><th>סוג</th><th>מה זה עושה</th></tr>
+<tr><td><bdi dir="ltr">WHILE</bdi></td><td class="mono">if E then C1 else C2</td><td>פקודה מותנית</td><td>בוחרת איזו <strong>פקודה</strong> לבצע: <bdi dir="ltr">C1</bdi> או <bdi dir="ltr">C2</bdi></td></tr>
+<tr><td><bdi dir="ltr">GOTO</bdi></td><td class="mono">if X then L1 else L2</td><td>קפיצה מותנית</td><td>לפי <strong>משתנה</strong> (לא ביטוי) בוחרת לאיזו <strong>תווית</strong> לקפוץ</td></tr>
+<tr><td><bdi dir="ltr">F</bdi></td><td class="mono">if E then E1 else E2</td><td>ביטוי מותנה</td><td>בוחרת איזה <strong>ערך</strong> יהיה לביטוי: של <bdi dir="ltr">E1</bdi> או של <bdi dir="ltr">E2</bdi></td></tr>
+</table></div>
+<p>המרצה הדגיש: "המילה <bdi dir="ltr">if</bdi> היא אותה מילה, אבל בכל שפה הייתה לה משמעות שונה". במבחן כדאי לשים לב באיזו שפה מדובר.</p>
+</div></div>
 <p><strong>סמנטיקה:</strong> אם הערך של <bdi dir="ltr">E</bdi> שונה מ-<bdi dir="ltr">nil</bdi>, ערך הביטוי כולו הוא הערך של <bdi dir="ltr">E1</bdi>. אחרת, הערך של <bdi dir="ltr">E2</bdi>. (בדומה לביטוי <code>c ? a : b</code> בשפת <bdi dir="ltr">C</bdi>.)</p>
 <div class="box exercise"><div class="box-h"><span class="tag">✍ דוגמה 2</span> <span class="ht">מה התוכנית מחשבת?</span></div><div class="box-body">
 <pre class="wh">read X
@@ -2634,8 +2784,14 @@ g(x) = nil        if x = nil</div>
 </details>
 </div></div>
 
-<div class="box warn"><div class="box-h"><span class="tag">שימו לב</span> <span class="ht">למה דוגמאות 1 ו-2 "אינן תוכניות חוקיות"</span></div><div class="box-body">
-<p>בשקפים כתוב ליד שתיהן "זו אינה תוכנית חוקית בשפת <bdi dir="ltr">F</bdi>". הסיבה: לפי התחביר המופשט (בהמשך), כל תוכנית ב-<bdi dir="ltr">F</bdi> <strong>חייבת</strong> לכלול הגדרה של פונקציית עזר אחת, <code>where f(…) = B</code>. בדוגמאות 1 ו-2 אין <bdi dir="ltr">where</bdi>. זה עניין טכני בלבד: תמיד אפשר להוסיף פונקציית עזר שלא משתמשים בה.</p>
+<div class="box warn"><div class="box-h"><span class="tag">סתירה: שקף מול הרצאה</span> <span class="ht">האם <bdi dir="ltr">where</bdi> הוא חובה?</span></div><div class="box-body">
+<div class="tbl"><table>
+<tr><th>מקור</th><th>מה נאמר</th></tr>
+<tr><td>השקפים (<bdi dir="ltr">comp-6a</bdi>)</td><td>ליד דוגמאות 1 ו-2 כתוב "זו אינה תוכנית חוקית בשפת <bdi dir="ltr">F</bdi>": לפי התחביר המופשט, כל תוכנית כוללת הגדרה של פונקציית עזר אחת, <code>where f(…) = B</code>.</td></tr>
+<tr><td>המרצה בשיעור 9 (16/11)</td><td>על דוגמה 1 (בלי <bdi dir="ltr">where</bdi>): "התוכנית חוקית מבחינה תחבירית". החלק של <bdi dir="ltr">where</bdi> "לא הכרחי" כשהביטוי לא משתמש בפונקציה.</td></tr>
+<tr><td>המרצה בשיעור 10 (19/11)</td><td>בתחביר הקונקרטי, כשאין פונקציה, כותבים <bdi dir="ltr">nil</bdi> במקום <bdi dir="ltr">B</bdi>: התוכנית היא <span class="ltr nw">(E nil)</span>.</td></tr>
+</table></div>
+<p><strong>מה לעשות בפועל:</strong> לפי המרצה מותר לכתוב תוכנית בלי <bdi dir="ltr">where</bdi>. אם רוצים להיות בטוחים, אפשר תמיד להוסיף פונקציית עזר שלא משתמשים בה, וזה מתאים לשתי הגרסאות.</p>
 </div></div>
 
 <h2 id="chF-aux">פונקציית העזר, ורקורסיה</h2>
@@ -2647,6 +2803,7 @@ write if X then f(X) else nil
 <li>זו תוכנית חוקית ב-<bdi dir="ltr">F</bdi>, והיא מחשבת את אותה פונקציה <bdi dir="ltr">g</bdi> מדוגמה 2.</li>
 <li>בגוף הפונקציה <bdi dir="ltr">f</bdi>, המזהה <bdi dir="ltr">Y</bdi> מתייחס לפרמטר של <bdi dir="ltr">f</bdi>. גם אם היינו קוראים לו <bdi dir="ltr">X</bdi>, הוא היה מתייחס לפרמטר של <bdi dir="ltr">f</bdi> ולא לקלט של התוכנית.</li>
 <li><strong>פונקציית העזר מאפשרת רקורסיה</strong>: <bdi dir="ltr">f</bdi> יכולה לקרוא לעצמה. זה התחליף של <bdi dir="ltr">F</bdi> ללולאות.</li>
+<li>מותר לתת לפרמטר שם אחר כדי שהקוד יהיה קריא, למשל <bdi dir="ltr">L</bdi> במקום <bdi dir="ltr">X</bdi> כשחושבים על הקלט כרשימה. זה לא משנה את המשמעות (המרצה, שיעור 9).</li>
 </ul>
 <div class="box exercise"><div class="box-h"><span class="tag">✍ דוגמה 3</span> <span class="ht">אפיון סמנטי</span></div><div class="box-body">
 <pre class="wh">read X
@@ -2658,6 +2815,22 @@ write f(X)
 <div class="f ltr">∀ d ∈ D :   ⟦p⟧ d = nil^(#d)</div>
 <p>זו התוכנית <strong>len</strong>. כל קריאה מורידה איבר אחד (<code>tl Y</code>) ומוסיפה <bdi dir="ltr">nil</bdi> אחד למונה (<code>cons nil …</code>). כש-<bdi dir="ltr">Y</bdi> מגיע ל-<bdi dir="ltr">nil</bdi>, הרקורסיה נעצרת ומחזירה <bdi dir="ltr">nil</bdi>. על <code>(1 2 3)</code> הפלט הוא <code>(nil nil nil)</code>, בדקתי במעבדה למטה.</p>
 </details>
+</div></div>
+
+<div class="box example"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">הרצה יבשה של <bdi dir="ltr">len</bdi> על <span class="ltr nw">((nil))</span> ועל <span class="ltr nw">(nil nil)</span></span></div><div class="box-body">
+<p>בכיתה רבים הסתבכו כאן, בגלל המעבר בין כתיב רשימות לכתיב עצים. <span class="ltr nw">((nil))</span> היא רשימה עם <strong>איבר אחד</strong>, והאיבר הוא בעצמו הרשימה <span class="ltr nw">(nil)</span>. בכתיב עצים זה <span class="ltr nw">((nil.nil).nil)</span>. לכן יש קריאה רקורסיבית אחת בלבד לפני שמגיעים ל-<bdi dir="ltr">nil</bdi>:</p>
+<div class="f ltr fl">len( ((nil)) )  =  cons nil len( nil )        tl ((nil)) = nil
+               =  cons nil nil
+               =  (nil)                        the encoding of 1</div>
+<p>ועל <span class="ltr nw">(nil nil)</span>, רשימה עם שני איברים:</p>
+<div class="f ltr fl">len( (nil nil) )  =  cons nil len( (nil) )
+                 =  cons nil cons nil len( nil )
+                 =  cons nil cons nil nil
+                 =  (nil nil)                  the encoding of 2</div>
+<p>הקלט <span class="ltr nw">(nil nil)</span> הוא גם המספר 2, והפלט שווה לו. זה לא מקרה: האורך של <span class="ltr nw">nil<sup>n</sup></span> הוא <bdi dir="ltr">n</bdi>. (נבדק במפרש של האתר.)</p>
+</div></div>
+<div class="box warn"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">תנאי עצירה בכל הגדרה רקורסיבית</span></div><div class="box-body">
+<p>אם ב-<bdi dir="ltr">len</bdi> כותבים <code>f(Y)</code> במקום <code>f(tl Y)</code>, הקריאה הרקורסיבית מקבלת את אותו קלט, והחישוב לא עוצר על אף רשימה לא ריקה. כך <bdi dir="ltr">F</bdi> מחשבת גם פונקציות חלקיות. לכן בכל הגדרה רקורסיבית בודקים: יש מקרה בסיס, וכל קריאה מתקרבת אליו.</p>
 </div></div>
 
 <h2 id="chF-syntax">תחביר מופשט ותחביר קונקרטי</h2>
@@ -2673,9 +2846,13 @@ E, B, E1,…,Ek ∈ Expression ::= d
 
 X, X1,…,Xk ∈ Parameter        d ∈ D</pre>
 <p>לפונקציית העזר יכולים להיות כמה פרמטרים (<bdi dir="ltr">k</bdi> כלשהו), אבל יש <strong>רק פונקציה אחת</strong>.</p>
+<div class="box theory"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">למה רק פונקציה אחת?</span></div><div class="box-body">
+<p>המרצה (שיעור 10): עם פונקציה אחת קל יותר להגדיר את התחביר הקונקרטי, כי בקריאה <code>(call …)</code> לא צריך לציין איזו פונקציה נקראת. "פחות נוח לכתוב תוכניות, אבל יותר נוח לכתוב את התחביר." בהמשך הפרק מראים ש-<span class="ltr nw">F<sup>+</sup></span>, עם כמה פונקציות, לא חזקה יותר.</p>
+</div></div>
 <div class="tbl"><table>
 <tr><th>תחביר טקסטואלי</th><th>תחביר קונקרטי</th></tr>
 <tr><td class="mono">read X; write E where f(X1,…,Xk) = B</td><td class="mono">(E B)</td></tr>
+<tr><td class="mono">read X; write E          (no function)</td><td class="mono">(E nil)</td></tr>
 <tr><td class="mono">d</td><td class="mono">(quote d)</td></tr>
 <tr><td class="mono">X        (the program input)</td><td class="mono">(var nil)</td></tr>
 <tr><td class="mono">Xi       (parameter i of f)</td><td class="mono">(var nil^i)</td></tr>
@@ -2684,6 +2861,7 @@ X, X1,…,Xk ∈ Parameter        d ∈ D</pre>
 <tr><td class="mono">if E then E1 else E2</td><td class="mono">(if E E1 E2)</td></tr>
 <tr><td class="mono">f(E1,…,Ek)</td><td class="mono">(call E1 … Ek)</td></tr>
 </table></div>
+<p>השורה <span class="ltr nw">(E nil)</span> היא לפי המרצה (שיעור 10): כשאין פונקציית עזר, במקום <bdi dir="ltr">B</bdi> כותבים <bdi dir="ltr">nil</bdi>.</p>
 <p>שימו לב: בקריאה <code>(call …)</code> לא כתוב שם הפונקציה, כי יש רק פונקציה אחת. הקלט של התוכנית הוא <span class="ltr nw">(var nil)</span> כלומר "משתנה מספר 0", והפרמטרים של <bdi dir="ltr">f</bdi> הם <span class="ltr nw">(var nil^1)</span> עד <span class="ltr nw">(var nil^k)</span>.</p>
 
 <h2 id="chF-time">מודל זמן הריצה</h2>
@@ -2706,6 +2884,13 @@ write f(hd x, tl x)
   where f(x, y) = if x then cons nil f(tl x, y)
                   else y</pre>
 <p>הרעיון זהה ל-<bdi dir="ltr">add</bdi> ב-<bdi dir="ltr">WHILE</bdi>: מורידים 1 מ-<bdi dir="ltr">x</bdi> ומוסיפים 1 לתוצאה, עד ש-<bdi dir="ltr">x</bdi> מתאפס, ואז מחזירים את <bdi dir="ltr">y</bdi>. מספר הקריאות <span class="ltr nw">n+1</span>, כלומר <span class="ltr nw">Θ(n)</span>. בדקתי: על <span class="ltr nw">(3 . 4)</span> הפלט <span class="ltr nw">nil<sup>7</sup></span>.</p>
+<p><strong>הרצה יבשה מהשיעור</strong>, "פתיחה וקיפול", על <span class="ltr nw">(2 . 3)</span>:</p>
+<div class="f ltr fl">add(2, 3)  =  cons nil add(1, 3)
+           =  cons nil cons nil add(0, 3)
+           =  cons nil cons nil 3
+           =  5</div>
+<p>האינטואיציה שהמרצה כתב: "כתבתי משהו פשוט בצורה מסובכת", אבל מבחינה רקורסיבית זה חיבור של מספרים קטנים יותר:</p>
+<div class="f ltr">n + m  =  1 + ((n − 1) + m)</div>
 </details>
 </div></div>
 
@@ -2715,6 +2900,31 @@ write f(x, nil)
   where f(x, N) = if x then cons nil f(tl x, f(hd x, N))
                   else cons nil N</pre>
 <p>הפרמטר <bdi dir="ltr">N</bdi> הוא "צובר": כמה צמתים כבר נספרו. על עץ <span class="ltr nw">(h . t)</span>: קודם סופרים את <bdi dir="ltr">h</bdi> (הקריאה הפנימית <span class="ltr nw">f(hd x, N)</span>), את התוצאה מעבירים כצובר לספירת <bdi dir="ltr">t</bdi>, ומוסיפים 1 עבור צומת הזוג. על <bdi dir="ltr">nil</bdi> מוסיפים 1 לצובר. בדקתי: על <code>((nil) (nil nil))</code> הפלט באורך 11, והגודל של העץ אכן 11.</p>
+<p><strong>האפיון של פונקציית העזר</strong> (המרצה ניסח אותו במפורש בשיעור 10): הצובר מתווסף לגודל.</p>
+<div class="f ltr">∀ x ∈ D, ∀ n ∈ ℕ :   f(x, nil^n) = nil^(|x| + n)</div>
+<p>לכן <span class="ltr nw">f(x, nil)</span> מחזירה בדיוק את <span class="ltr nw">|x|</span>. (נבדק במפרש על כמה עצים וערכי <bdi dir="ltr">n</bdi>.)</p>
+<p>המרצה קרא לצורה <span class="ltr nw">f(tl x, f(hd x, N))</span> <strong>"רקורסיה מסדר שני"</strong>: קריאה רקורסיבית שנמצאת בתוך ארגומנט של קריאה רקורסיבית אחרת.</p>
+</div></div>
+<div class="box example"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">הרצה יבשה של <bdi dir="ltr">size</bdi> על עץ עם 5 צמתים</span></div><div class="box-body">
+<p>הקלט <span class="ltr nw">(nil nil)</span>, כלומר <span class="ltr nw">(nil . (nil . nil))</span>: 3 עלים ו-2 זוגות. כותבים את המספרים בקיצור: 1 במקום <span class="ltr nw">(nil)</span> וכו'.</p>
+<div class="f ltr fl">f(x, 0)     =  cons nil f(tl x, f(hd x, 0))     hd x = nil
+f(nil, 0)   =  1                                tl x = (nil . nil)
+f(tl x, 1)  =  cons nil f(nil, f(nil, 1))
+            =  cons nil f(nil, 2)
+            =  cons nil 3
+            =  4
+f(x, 0)     =  cons nil 4  =  5</div>
+<p>הצובר עובר דרך כל העלים לפי הסדר (1, 2, 3), וכל זוג מוסיף 1 בקיפול (4, 5). (בתמלול לא ברור לגמרי איזה עץ צויר בלוח; העץ כאן נותן בדיוק את הסדר 1 עד 5 שנכתב, ונבדק במפרש.)</p>
+</div></div>
+<div class="box theory"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">איטרציה ב-<bdi dir="ltr">WHILE</bdi> מול רקורסיה ב-<bdi dir="ltr">F</bdi></span></div><div class="box-body">
+<p>"פה אין לי לולאה, אבל יש לי פה רקורסיה." אותן תוכניות בשתי השפות:</p>
+<div class="tbl"><table>
+<tr><th>תוכנית</th><th><bdi dir="ltr">WHILE</bdi>: לולאה ומשתנים</th><th><bdi dir="ltr">F</bdi>: רקורסיה ופרמטרים</th></tr>
+<tr><td><bdi dir="ltr">len</bdi></td><td>בכל סיבוב <code>Y := cons nil Y</code> ו-<code>X := tl X</code></td><td><span class="ltr nw">f(Y) = cons nil f(tl Y)</span>, ובסוף <bdi dir="ltr">nil</bdi></td></tr>
+<tr><td><bdi dir="ltr">add</bdi></td><td>בכל סיבוב מורידים 1 מ-<bdi dir="ltr">n</bdi> ומוסיפים 1 ל-<bdi dir="ltr">m</bdi></td><td><span class="ltr nw">f(x, y) = cons nil f(tl x, y)</span>, ובסוף <bdi dir="ltr">y</bdi></td></tr>
+<tr><td><bdi dir="ltr">size</bdi></td><td>מסובבים את העץ עד שהראש <bdi dir="ltr">nil</bdi> (עם <bdi dir="ltr">case</bdi>)</td><td>צובר: <span class="ltr nw">f(tl x, f(hd x, N))</span></td></tr>
+</table></div>
+<p>מה שהיה מצב שמשתנה בכל סיבוב (ערכי המשתנים) הופך לארגומנטים של הקריאה הבאה. סדר הגודל של זמן הריצה נקבע לפי מספר הקריאות הרקורסיביות, כמו מספר האיטרציות ב-<bdi dir="ltr">WHILE</bdi>.</p>
 </div></div>
 
 <h3>ממתיקים תחביריים ב-<bdi dir="ltr">F</bdi></h3>
@@ -2740,7 +2950,7 @@ write last(L)
 <ul>
 <li>רשימה עם איבר אחד, <code>(x)</code>: הוא האחרון.</li>
 <li>אחרת, אם יש ראש וזנב: ממשיכים ברקורסיה על הזנב. הסדר חשוב: התבנית <code>(x)</code> נבדקת קודם, כי גם היא מתאימה ל-<code>(h . t)</code>.</li>
-<li>רשימה ריקה: <code>last(L)</code> קוראת לעצמה עם אותו קלט בדיוק, ולכן לא עוצרת. זו הדרך לממש "אין פלט", כלומר ⊥.</li>
+<li>רשימה ריקה: <code>last(L)</code> קוראת לעצמה עם אותו קלט בדיוק, ולכן לא עוצרת. זו הדרך לממש "אין פלט", כלומר ⊥. המרצה הדגיש: זה לא "לולאה" (אין לולאות ב-<bdi dir="ltr">F</bdi>), אלא <strong>חישוב רקורסיבי אינסופי</strong>.</li>
 </ul>
 <p>בדקתי במעבדה: על <code>(1 2 3)</code> הפלט <span class="ltr nw">nil<sup>3</sup></span>, ועל <bdi dir="ltr">nil</bdi> התוכנית לא עוצרת.</p>
 </details>
@@ -2748,7 +2958,8 @@ write last(L)
 
 <h2 id="chF-variants">גרסאות של <bdi dir="ltr">F</bdi>: פרמטר אחד, וכמה פונקציות (<bdi dir="ltr">comp-6a</bdi>)</h2>
 <div class="box theory"><div class="box-h"><span class="tag">טענה</span> <span class="ht"><span class="ltr">F ≡ <span class="ltr nw">F<sup>1prm</sup></span></span></span></div><div class="box-body">
-<p><span class="ltr nw">F<sup>1prm</sup></span> היא <bdi dir="ltr">F</bdi> שבה לפונקציית העזר יש <strong>פרמטר אחד בלבד</strong>.</p>
+<p><span class="ltr nw">F<sup>1prm</sup></span> היא <bdi dir="ltr">F</bdi> שבה לפונקציית העזר יש <strong>פרמטר אחד בלבד</strong>. (המרצה קורא לה "F one par", <span class="ltr nw">F<sup>1par</sup></span>: זה אותו דבר.)</p>
+<p>המרצה הדגיש: הארגומנט היחיד, הרשימה, מחושב לפני הקריאה. האריזה ברשימה קורית בכל קריאה, גם בקריאות הרקורסיביות שבתוך <bdi dir="ltr">B</bdi>.</p>
 <p><strong>כיוון אחד</strong> ברור: כל תוכנית <span class="ltr nw">F<sup>1prm</sup></span> היא תוכנית <bdi dir="ltr">F</bdi>.</p>
 <p><strong>הכיוון השני</strong>: קומפיילר שאורז את כל הפרמטרים לרשימה אחת, כמו שארזנו את כל המשתנים ב-<span class="ltr nw">WHILE<sup>1VAR</sup></span>:</p>
 <div class="tbl"><table>
@@ -2779,10 +2990,19 @@ write f(list (hd x) (tl x))
                   else "(nil)"
   and   add(x, y) = if x then cons nil add(tl x, y)
                     else y</pre>
-<p><strong>הכיוון הקשה</strong>, <span class="ltr"><span class="ltr nw">F ⪰ F<sup>+</sup></span></span>, בקומפילציה בשני שלבים:</p>
+<ul>
+<li>ב-<span class="ltr nw">F<sup>+</sup></span> מותרת גם <strong>רקורסיה הדדית</strong>: <bdi dir="ltr">f1</bdi> מוגדרת בעזרת <bdi dir="ltr">f2</bdi>, ו-<bdi dir="ltr">f2</bdi> בעזרת <bdi dir="ltr">f1</bdi>.</li>
+<li><strong>למה ב-<bdi dir="ltr">F</bdi> צריך צובר ב-<bdi dir="ltr">size</bdi>, וב-<span class="ltr nw">F<sup>+</sup></span> לא:</strong> ב-<span class="ltr nw">F<sup>+</sup></span> אפשר לכתוב ישר את ההגדרה המתמטית, כי החיבור הוא פונקציה נפרדת:</li>
+</ul>
+<div class="f ltr">size(nil) = 1          size((h . t)) = 1 + size(h) + size(t)</div>
+<p>ב-<bdi dir="ltr">F</bdi> יש פונקציה אחת בלבד, ואין "פונקציית חיבור" לקרוא לה. לכן הגרסה עם פונקציה אחת מעבירה את התוצאה החלקית כצובר. זו בדיוק הסיבה לגרסה המסובכת יותר של <bdi dir="ltr">size</bdi> למעלה.</p>
+<div class="box warn"><div class="box-h"><span class="tag">יהיה בתרגיל</span> <span class="ht">הוכחה מדויקת של <span class="ltr nw">F ≡ F<sup>+</sup></span></span></div><div class="box-body">
+<p>המרצה (שיעור 10): "יש לכם שאלה בתרגיל הבא שבה אתם מתבקשים להראות" את השקילות במדויק. בשיעור הוא הציג רק את הרעיון.</p>
+</div></div>
+<p><strong>הכיוון הקשה</strong>, <span class="ltr"><span class="ltr nw">F ⪰ F<sup>+</sup></span></span>. המרצה קרא לזה "אלגוריתם קומפילציה" ולא "קומפיילר", כי יש בו שני שלבים:</p>
 <ol>
 <li><strong>אריזת פרמטרים:</strong> כמו ב-<span class="ltr nw">F<sup>1prm</sup></span>, לכל פונקציה פרמטר יחיד <bdi dir="ltr">x</bdi>.</li>
-<li><strong>מיזוג הפונקציות:</strong> פונקציה אחת <bdi dir="ltr">f</bdi> עם פרמטר נוסף <bdi dir="ltr">i</bdi> שאומר "לאיזו פונקציה התכוונו". כל קריאה <span class="ltr nw">fi(X)</span> מוחלפת ב-<span class="ltr nw">f(i, X)</span>:</li>
+<li><strong>מיזוג הפונקציות:</strong> פונקציה אחת <bdi dir="ltr">f</bdi> עם פרמטר נוסף <bdi dir="ltr">i</bdi>. לפי המרצה, האינדקס אומר "איזה ביטוי לחשב", ולא ממש "לאיזו פונקציה לקרוא". כל קריאה <span class="ltr nw">fi(X)</span> מוחלפת ב-<span class="ltr nw">f(i, X)</span>:</li>
 </ol>
 <pre class="wh">read x; write E'
   where f(i, x) = case i of
@@ -2799,6 +3019,15 @@ write f(list (hd x) (tl x))
 
 <h2 id="chF-compile">קומפילציה מ-<bdi dir="ltr">F</bdi> ל-<bdi dir="ltr">GOTO</bdi></h2>
 <p><strong>הרעיון:</strong> ב-<bdi dir="ltr">GOTO</bdi> אין רקורסיה ואין ביטויים מקוננים. לכן התוכנית המתורגמת משתמשת בשתי <strong>מחסניות</strong>:</p>
+<div class="box warn"><div class="box-h"><span class="tag">מהשיעור</span> <span class="ht">מה האתגר האמיתי כאן</span></div><div class="box-body">
+<ul>
+<li><strong>האתגר העיקרי הוא שבירת הרקורסיה</strong>, לא הביטויים המקוננים. ביטויים כבר יודעים לפרק בעזרת משתני עזר (כמו ב-<span class="ltr nw">WHILE<sup>OP1</sup></span>).</li>
+<li><strong>למה שתי מחסניות:</strong> מחסנית הערכים שומרת תוצאות ביניים. מחסנית כתובות החזרה אומרת לאן לחזור בסוף קריאה. יש כמה מקומות בתוכנית שקוראים לפונקציה, ובקריאות מקוננות צריך לחזור אליהם בסדר הפוך (<bdi dir="ltr">LIFO</bdi>), ולכן משתנה אחד לא מספיק. ("כמו באסמבלי": קריאה דוחפת, חזרה מוציאה.)</li>
+<li><strong>push ו-pop חוקיות ב-<bdi dir="ltr">GOTO</bdi></strong>, כי כל השמה בהן משתמשת באופרטור אחד בלבד: <bdi dir="ltr">cons</bdi> ב-push, ו-<bdi dir="ltr">hd</bdi> ואז <bdi dir="ltr">tl</bdi> ב-pop.</li>
+<li><strong>האינווריאנטה:</strong> בסוף התרגום של כל ביטוי <bdi dir="ltr">E</bdi>, הערך של <bdi dir="ltr">E</bdi> נמצא בראש מחסנית הערכים. המרצה חזר על זה בכל שורה בטבלה.</li>
+<li>המרצה לא נכנס לכל הפרטים של הטבלה בשיעור, וביקש לעבור עליה בבית מהחוברת ומהשקפים: "יש פה הרבה נקודות עדינות". צריך להבין את הרעיון ולדעת לקרוא את הטבלה.</li>
+</ul>
+</div></div>
 <ol>
 <li><strong><bdi dir="ltr">Val</bdi>, מחסנית הערכים:</strong> כל ערך שמחושב נדחף אליה. כל תרגום של ביטוי <bdi dir="ltr">E</bdi> משאיר את הערך של <bdi dir="ltr">E</bdi> בראש <bdi dir="ltr">Val</bdi>.</li>
 <li><strong><bdi dir="ltr">Ret</bdi>, מחסנית כתובות החזרה:</strong> לפני קריאה לפונקציה דוחפים אליה את התווית שאליה צריך לחזור.</li>
@@ -2849,7 +3078,7 @@ goto FUNC</td></tr>
 </table></div>
 <p>קו תחתון = הטיפול הרקורסיבי באותה טבלה (כמו בפרק 3). כמה פרטים שכדאי לשים לב אליהם:</p>
 <ul>
-<li><strong>cons:</strong> מחשבים קודם את <bdi dir="ltr">E1</bdi> ואחר כך את <bdi dir="ltr">E2</bdi>, ולכן <bdi dir="ltr">E2</bdi> נמצא בראש המחסנית. מוציאים קודם את <bdi dir="ltr">Tmp2</bdi> ורק אז את <bdi dir="ltr">Tmp1</bdi>. ב-<bdi dir="ltr">comp-6a</bdi> הסדר הפוך (<bdi dir="ltr">E2</bdi> ואז <bdi dir="ltr">E1</bdi>), וזה עובד באותה מידה.</li>
+<li><strong>cons:</strong> מחשבים קודם את <bdi dir="ltr">E1</bdi> ואחר כך את <bdi dir="ltr">E2</bdi>, ולכן <bdi dir="ltr">E2</bdi> נמצא בראש המחסנית. מוציאים קודם את <bdi dir="ltr">Tmp2</bdi> ורק אז את <bdi dir="ltr">Tmp1</bdi>. ב-<bdi dir="ltr">comp-6a</bdi>, וגם בהרצאה (שיעור 10), הסדר הפוך: "קודם כל מחשבים את <bdi dir="ltr">E2</bdi>", כך ש-<bdi dir="ltr">E1</bdi> נמצא בראש המחסנית ומוציאים אותו ראשון. שתי הגרסאות נכונות, כל עוד ה-pop מתאים לסדר ה-push. במבחן כדאי לכתוב כמו בשקף.</li>
 <li><strong>קריאה:</strong> הארגומנטים נדחפים לפי הסדר, ולכן בכניסה לפונקציה מוציאים אותם בסדר <strong>הפוך</strong>: קודם <bdi dir="ltr">Xk</bdi> ובסוף <bdi dir="ltr">X1</bdi>.</li>
 <li><strong>Ncall</strong> הוא מספר ההוראה שאחרי ה-<bdi dir="ltr">goto FUNC</bdi>, כלומר המקום שאליו חוזרים. הקומפיילר יודע אותו כי הוא ממספר את ההוראות.</li>
 <li><strong><span class="ltr nw">goto L</span></strong>, כש-<bdi dir="ltr">L</bdi> הוא משתנה ולא מספר קבוע, הוא ממתיק: ב-<bdi dir="ltr">GOTO</bdi> אפשר לקפוץ רק לתווית קבועה. מממשים אותו כשרשרת של <bdi dir="ltr">if</bdi>-ים שבודקת את <bdi dir="ltr">L</bdi> מול כל אחת מכתובות החזרה האפשריות (יש מספר סופי של קריאות בתוכנית).</li>
@@ -2939,6 +3168,16 @@ END:
 <p>הראינו כעת קומפיילר מ-<bdi dir="ltr">F</bdi> ל-<bdi dir="ltr">GOTO</bdi>, ולכן <span class="ltr"><span class="ltr nw">GOTO ⪰ F</span></span>. מוקדם יותר הראינו ש-<span class="ltr nw">WHILE ⪰ GOTO</span> (בפרק <bdi dir="ltr">5, WHILE</bdi> ≡ <bdi dir="ltr">GOTO</bdi>). לפי טרנזיטיביות <span class="ltr"><span class="ltr nw">WHILE ⪰ F</span></span>.</p>
 <p>והתשובה לשאלה היא כן, <span class="ltr"><span class="ltr nw">F ⪰ WHILE</span></span>. ההוכחה בחלק הבא, בעזרת מפרש.</p>
 </details>
+</div></div>
+
+<div class="box summary"><div class="box-h"><span class="tag">המסקנה החשובה</span> <span class="ht"><span class="ltr nw">WHILE ≡ GOTO ≡ F</span></span></div><div class="box-body">
+<p>המרצה (שיעור 10): "מה שחשוב בעיקר זה המסקנה". מבנה ההוכחה:</p>
+<ol>
+<li><strong>טענת עזר 1:</strong> <span class="ltr nw">GOTO ⪰ F</span>, בקומפיילר עם שתי המחסניות. יחד עם <span class="ltr nw">WHILE ≡ GOTO</span> מקבלים <span class="ltr nw">WHILE ⪰ F</span>.</li>
+<li><strong>טענת עזר 2:</strong> <span class="ltr nw">F ⪰ WHILE</span>, בעזרת מפרש ל-<span class="ltr nw">WHILE<sup>1VAR</sup></span> שכתוב ב-<bdi dir="ltr">F</bdi> (החלק הבא; בכיתה הוא מוצג בשיעור 11).</li>
+</ol>
+<p><strong>למה זה חשוב:</strong> ל-<bdi dir="ltr">WHILE</bdi> יש רק ארבע פקודות, והיא יודעת לעשות כל מה ששפת סף עם קפיצות (<bdi dir="ltr">GOTO</bdi>) ושפה רקורסיבית (<bdi dir="ltr">F</bdi>) יודעות. זה הבסיס לבחירה ב-<bdi dir="ltr">WHILE</bdi> כמודל החישובי של הקורס.</p>
+<p>לא כל שפה היא כזו: שפת <bdi dir="ltr">FOR</bdi> ממטלה 2 (לולאה שרצה מספר פעמים קבוע מראש) חלשה ממש מ-<bdi dir="ltr">WHILE</bdi>, כי תוכניות <bdi dir="ltr">FOR</bdi> תמיד עוצרות. ראו גם את שאלת המבחן עליה ב<a href="#chComp-exams">פרק 8</a>.</p>
 </div></div>
 
 <h2 id="chF-int">מפרש ל-<span class="ltr nw">WHILE<sup>1VAR</sup></span> שכתוב ב-<bdi dir="ltr">F</bdi></h2>
